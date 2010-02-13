@@ -5,8 +5,12 @@ Release:	0.1
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://projects.mini-dweeb.org/attachments/download/89/%{name}-%{version}.tar.gz
+# Source0-md5:	79251ccefaa7346991939de79a8c3bbc
 URL:		http://projects.mini-dweeb.org/projects/unagi
-BuildRequires:	xcb-devel
+# xcb-ewmh doesn't exist yet in PLD
+BuildRequires:	xcb-ewmh
+BuildRequires:	xcb-proto
+BuildRequires:	xcb-util-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
